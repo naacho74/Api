@@ -1,4 +1,14 @@
-#img{
-    height: 200px;
-    width: 300px;
+
+
+
+#barra{
+    
+    width: 150px;
+    height: 15px;
+    overflow:hidden;
+    border:1px inset rgb(0, 0, 0);
+    background-color:#D8D8D8;
+    border-radius : 20px ;
+    
+   
 }

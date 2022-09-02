@@ -1,6 +1,8 @@
-export function pitarCanciones(canciones){
+export function pintarCanciones(canciones){
 
 let fila=document.getElementById('fila') 
+
+fila.textContent=''
 canciones.forEach(function(cancion){
     
 
@@ -22,12 +24,30 @@ audio.classList.add('w-100')
 audio.setAttribute('controls','controls')
 audio.src=cancion.preview_url
 
-let popularidad=document.createElement('h4')
-popularidad.textContent=cancion.popularity
+let tituloPopularidad=document.createElement('h5')
+tituloPopularidad.classList.add('mt-5','text-center','bold')
+tituloPopularidad.textContent='Popularidad '+ cancion.popularity+'%'
+
+let popularidad=document.createElement('progress')
+popularidad.classList.add('mb-3','mx-auto','d-block')
+popularidad.setAttribute('max','100')
+popularidad.setAttribute('id','barra')
+popularidad.value=cancion.popularity
+
+
+
+
+
+
+
+
+
+
 
 tarjeta.appendChild(nombre)
 tarjeta.appendChild(imagen)
 tarjeta.appendChild(audio)
+tarjeta.appendChild(tituloPopularidad)
 tarjeta.appendChild(popularidad)
 columna.appendChild(tarjeta)
 fila.appendChild(columna)
