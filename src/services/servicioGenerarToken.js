@@ -12,8 +12,27 @@ const DATO3='client_secret=c65a1ea90c334d2f80e4ad0d686b0f4f'
 //PETICION
 const PETICION={
     method:'POST',
-    headers:{},
+    headers:{"Content-Type":"application/x-www-form-urlencoded"},
     body:DATO1+'&'+DATO2+'&'+DATO3
 }
 
 //fetch
+//promesa
+/*
+fetch(URI,PETICION)
+.then(function(respuesta){
+   
+    return respuesta.json()
+})
+.then(function(respuesta){
+   console.log(respuesta)
+})
+.catch(function(respuesta){
+  console.log(respuesta)
+}) */
+
+//async await
+ export async function obtenerToken(){
+    let respuesta=await fetch(URI,PETICION)
+    return await respuesta.json()
+}

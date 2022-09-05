@@ -7,7 +7,7 @@ import {consultarCanciones} from '../services/servicioConsultarCanciones.js'
 //funcion para consumir
 let canciones=await consultarCanciones(URI,PETICION)
 
-console.log(canciones.tracks[1].album)
+//console.log(canciones.tracks[1].album)
 
 pintarCanciones(canciones.tracks)
 
